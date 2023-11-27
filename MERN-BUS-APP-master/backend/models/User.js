@@ -22,10 +22,7 @@ const UserSchema = new Schema({
         type: String,
         required: true,
     },
-    dob: {
-        type: Date,
-        required: false,
-    },
+   
 });
 
 const User = mongoose.model("user", UserSchema);

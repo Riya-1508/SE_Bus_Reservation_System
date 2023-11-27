@@ -7,6 +7,12 @@ var bcrypt = require("bcrypt");
 const router = express.Router();
 
 router.post("/login", async(req, res, next) => {
+    // res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+    // res.setHeader(
+    //   "Access-Control-Allow-Methods",
+    //   "POST,GET,OPTIONS,PUT,DELETE"
+    // );
+    // res.setHeader("Access-Control-Allow-Headers", "Content-Type,Accept");
     const { email, password } = req.body;
     try {
         User.findOne({ email: email }, (err, doc) => {

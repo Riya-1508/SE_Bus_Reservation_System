@@ -8,6 +8,11 @@ const cors = require('cors')
 
 
 var app = express();
+var corsOptions = {
+  origin: "*",
+  optionsSuccessStatus: 200,
+};
+app.use(cors(corsOptions));
 
 
 // Login and Register 
